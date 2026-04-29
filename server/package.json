@@ -1,0 +1,21 @@
+{
+  "name": "electwise-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "@google/genai": "*",
+    "cors": "*",
+    "dotenv": "*",
+    "express": "*",
+    "express-mongo-sanitize": "*",
+    "express-rate-limit": "*",
+    "helmet": "*",
+    "morgan": "*",
+    "node-cache": "*",
+    "node-fetch": "*"
+  }
+}

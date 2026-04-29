@@ -1,0 +1,33 @@
+{
+  "name": "electwise-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-three/drei": "*",
+    "@react-three/fiber": "*",
+    "framer-motion": "*",
+    "react": "^19.0.0",
+    "react-confetti": "*",
+    "react-countup": "*",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "*",
+    "react-icons": "*",
+    "leaflet": "*",
+    "react-leaflet": "*",
+    "react-markdown": "*",
+    "react-router-dom": "*",
+    "three": "*"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "tailwindcss": "^4.0.0",
+    "vite": "^5.2.0"
+  }
+}
