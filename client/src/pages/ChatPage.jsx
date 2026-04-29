@@ -38,8 +38,12 @@ const ChatPage = () => {
     setIsLoading(true);
 
     try {
-      // Connects to 4-tier fallback system
-      const apiUrl = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api/chat` : '/api/chat';
+      // Connects to 4-tier fallback system with automatic production detection
+      const apiUrl = import.meta.env.VITE_API_URL 
+        ? `${import.meta.env.VITE_API_URL}/api/chat` 
+        : (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1'
+            ? 'https://electwise-backend.onrender.com/api/chat' 
+            : '/api/chat');
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
