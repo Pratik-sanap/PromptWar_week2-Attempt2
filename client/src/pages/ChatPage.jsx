@@ -38,8 +38,9 @@ const ChatPage = () => {
     setIsLoading(true);
 
     try {
-      // API call placeholder - connects to 4-tier fallback system
-      const response = await fetch('/api/chat', {
+      // Connects to 4-tier fallback system
+      const apiUrl = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api/chat` : '/api/chat';
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: text })
